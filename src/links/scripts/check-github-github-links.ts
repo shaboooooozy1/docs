@@ -16,6 +16,7 @@ import { fetchWithRetry } from '@/frame/lib/fetch-utils'
 import { program } from 'commander'
 
 import { getContents, getPathsWithMatchingStrings } from '@/workflows/git-utils'
+import { chunkArray } from '@/links/lib/batch'
 
 if (!process.env.GITHUB_TOKEN) {
   throw new Error('Error! You must have a GITHUB_TOKEN set in an .env file to run this script.')
@@ -186,8 +187,7 @@ async function main(opts: MainOptions, args: string[]) {
   }[] = []
 
   // Break up the long list of URLs to test into batches
-  for (const batch of [...Array(Math.floor(docsLinksFiles.length / BATCH_SIZE)).keys()]) {
-    const slice = docsLinksFiles.slice(batch * BATCH_SIZE, batch * BATCH_SIZE + BATCH_SIZE)
+  for (const slice of chunkArray(docsLinksFiles, BATCH_SIZE)) {
     await Promise.all(
       slice.map(async ({ linkPath, file }) => {
         // This isn't necessary but if it can't be constructed, it'll
