@@ -23,7 +23,7 @@ function stripLiquid(text: string): string {
 }
 
 // Given a URI that does not start with a specific language,
-// return undefined if it can found as a known page.
+// return null if it can be found as a known page.
 // Otherwise, return an object with information that is used to
 // print a useful test error message in the assertion.
 // Using 'any' type for redirectsContext parameter as it's a complex context object

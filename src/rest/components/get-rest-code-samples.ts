@@ -127,7 +127,7 @@ export function getShellExample(
     urlArg = `"${urlArg}"`
   }
 
-  // Overwrite curl examples since the github enterprise related apis are seperate from the dotcom api standards
+  // Overwrite curl examples since the GitHub Enterprise related APIs are separate from dotcom API standards.
   if (operation.subcategory === 'management-console' || operation.subcategory === 'manage-ghes') {
     authHeader = '-u "api_key:your-password"'
     apiVersionHeader = ''
