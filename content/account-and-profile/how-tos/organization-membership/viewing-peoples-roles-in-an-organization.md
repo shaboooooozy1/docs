@@ -16,6 +16,8 @@ versions:
   ghec: '*'
 shortTitle: View organization members
 contentType: how-tos
+category:
+  - Participate in organizations
 ---
 
 {% ifversion ghes or ghec %}
@@ -33,7 +35,7 @@ contentType: how-tos
 
 {% ifversion fpt %}
 
-If your organization uses {% data variables.product.prodname_ghe_cloud %}, you can also view the enterprise owners who manage billing settings and policies for all your enterprise's organizations. For more information, see [the {% data variables.product.prodname_ghe_cloud %} documentation](/enterprise-cloud@latest/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-your-membership-in-organizations/viewing-peoples-roles-in-an-organization#view-enterprise-owners-and-their-roles-in-an-organization).
+If your organization uses {% data variables.product.prodname_ghe_cloud %}, you can also view the enterprise owners who manage billing settings and policies for all your enterprise's organizations. For more information, see [the {% data variables.product.prodname_ghe_cloud %} documentation](/enterprise-cloud@latest/account-and-profile/how-tos/organization-membership/viewing-peoples-roles-in-an-organization#view-enterprise-owners-and-their-roles-in-an-organization).
 
 {% else %}
 

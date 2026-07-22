@@ -6,16 +6,12 @@ versions:
   fpt: '*'
   ghes: '*'
   ghec: '*'
-topics:
-  - Code Security
-  - Secret Protection
-  - Organizations
-  - Security
-  - Advanced Security
-  - Enterprise
 contentType: reference
 children:
-  - /available-filters-for-security-overview
-  - /security-configuration-enforcement
+  - /overview-dashboard-metrics
+  - /overview-dashboard-filters
+  - /configuration-enforcement
+  - /configuration-statuses
   - /troubleshoot-security-configurations
 ---
+

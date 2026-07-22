@@ -8,12 +8,12 @@ product: '{% data reusables.gated-features.code-quality-availability %}'
 permissions: Enterprise owners
 audience:
   - driver
-topics:
-  - Code Quality
 contentType: how-tos
 allowTitleToDifferFromFilename: true
 redirect_from:
   - /code-security/code-quality/how-tos/allow-in-enterprise
+category:
+  - Secure at scale
 ---
 
 > [!NOTE]
@@ -29,4 +29,4 @@ redirect_from:
 
 ## Next steps
 
-To see {% data variables.product.prodname_code_quality_short %} in action, turn the feature on for one or more repositories. See [AUTOTITLE](/code-security/code-quality/how-tos/enable-code-quality).
+To see {% data variables.product.prodname_code_quality_short %} in action, turn the feature on for one or more repositories. See [AUTOTITLE](/code-security/how-tos/maintain-quality-code/enable-code-quality).

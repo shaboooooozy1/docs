@@ -5,10 +5,6 @@ versions:
   fpt: '*'
   ghec: '*'
   ghes: '*'
-topics:
-  - Code Security
-  - Code scanning
-  - CodeQL
 allowTitleToDifferFromFilename: true
 intro: If {% data variables.product.prodname_vscode_shortname %} telemetry is enabled, {% data variables.product.company_short %} will collect usage data and metrics for the purposes of helping the core developers to improve the {% data variables.product.prodname_codeql %} extension for {% data variables.product.prodname_vscode_shortname %}.
 redirect_from:
@@ -16,6 +12,8 @@ redirect_from:
   - /code-security/codeql-for-vs-code/using-the-advanced-functionality-of-the-codeql-for-vs-code-extension/telemetry-in-codeql-for-visual-studio-code
   - /code-security/reference/code-scanning/codeql/telemetry-in-codeql-for-visual-studio-code
 contentType: reference
+category:
+  - Find CodeQL CLI commands
 ---
 
 This data will not be shared with any parties outside of {% data variables.product.company_short %}. IP addresses and installation IDs will be retained for a maximum of 30 days. Anonymous data will be retained for a maximum of 180 days.
@@ -43,7 +41,7 @@ If telemetry is enabled, {% data variables.product.company_short %} collects the
 
 * IP address of the client sending the telemetry data. This is discarded before aggregation.
 
-* Whether any {% data variables.product.prodname_codeql %} for {% data variables.product.prodname_vscode_shortname %} extension settings are configured. For more information about customizing settings, see [AUTOTITLE](/code-security/codeql-for-vs-code/using-the-advanced-functionality-of-the-codeql-for-vs-code-extension/customizing-settings).
+* Whether any {% data variables.product.prodname_codeql %} for {% data variables.product.prodname_vscode_shortname %} extension settings are configured. For more information about customizing settings, see [AUTOTITLE](/code-security/how-tos/find-and-fix-code-vulnerabilities/scan-from-vs-code/customize-settings).
 
 ## How long data is retained
 

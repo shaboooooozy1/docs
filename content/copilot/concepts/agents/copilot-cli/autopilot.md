@@ -9,6 +9,8 @@ contentType: concepts
 category:
   - Learn about Copilot CLI # Copilot CLI bespoke page
   - Learn about Copilot # Copilot discovery page
+docsTeamMetrics:
+  - copilot-cli
 ---
 
 ## Overview
@@ -43,11 +45,7 @@ To switch into autopilot mode during an interactive session, press <kbd>Shift</k
 
 * **Trust:** You need to trust {% data variables.product.prodname_copilot_short %} to make reasonable decisions. Autopilot mode works best when you grant it approval for all permissions. This is equivalent to running {% data variables.copilot.copilot_cli_short %} with the `--allow-all` option. You should be aware that this gives the CLI permission to make any changes it deems necessary to complete the task, including altering and deleting files.
 
-* **Cost:** Autopilot mode uses premium requests in the same way that these are used when you are working in the standard interactive interface. In the standard mode, one premium request is used when you submit your initial prompt, and then an additional premium request is used each time you reply to a question in the CLI and the agent uses your response to interact with the AI model. The same applies in autopilot mode, except that you are not involved in initiating the next step, so the use of additional premium requests happens without your direct involvement.
-
-  {% data reusables.cli.billable-prus %}
-
-  Each time the agent continues autonomously it will display a message in the CLI telling you how many premium requests have been used by that continuation step—taking account of the model multiplier—for example: `Continuing autonomously (3 premium requests)`.
+* **Cost:** Each time {% data variables.product.prodname_copilot_short %} interacts with the AI model, it consumes {% data variables.product.prodname_ai_credits_short %} based on the number of tokens processed. The same applies in autopilot mode, except that {% data variables.product.prodname_copilot_short %} initiates each subsequent interaction autonomously, so {% data variables.product.prodname_ai_credits_short %} are consumed without your direct involvement.
 
 ## Permissions
 
@@ -61,9 +59,23 @@ When entering autopilot mode, if you have not already granted {% data variables.
 
 You will get the best results from autopilot mode if you enable all permissions. If you choose to continue with limited permissions, {% data variables.product.prodname_copilot_short %} will automatically deny any tool requests that require approval, which may prevent it from completing certain tasks. You can change your mind later and grant full permissions, during an autopilot session, by using the `/allow-all` command (or its alias `/yolo`).
 
+## Staying in autopilot mode between tasks
+
+By default, autopilot mode applies only to the current task. Once {% data variables.product.prodname_copilot_short %} determines that the task is complete, {% data variables.copilot.copilot_cli_short %} automatically switches back to the standard interactive mode. To run another task in autopilot mode, press <kbd>Shift</kbd>+<kbd>Tab</kbd> and cycle through the available modes until you re-enter autopilot mode, then enter your next prompt.
+
+If you regularly run several tasks in autopilot mode, you can configure the CLI to stay in autopilot mode after each task completes, by enabling the `stayInAutopilot` setting. You can do this in either of the following ways:
+
+* During an interactive session, enter `/settings stayInAutopilot true`.
+* Add `"stayInAutopilot": true` to your user configuration file (`~/.copilot/settings.json`). For more information, see [AUTOTITLE](/copilot/reference/copilot-cli-reference/cli-config-dir-reference#user-settings-copilotsettingsjson).
+
+When this setting is enabled, {% data variables.product.prodname_copilot_short %} remains in autopilot mode after a task completes, so the next prompt you enter is also handled in autopilot mode. You can switch back to interactive mode at any time by pressing <kbd>Shift</kbd>+<kbd>Tab</kbd>.
+
+> [!NOTE]
+> This setting only controls which mode you are in _after_ a task completes. It does not cause {% data variables.product.prodname_copilot_short %} to keep working after it has decided the task is done. Autopilot still stops when the task is complete, when a problem occurs, when you press <kbd>Ctrl</kbd>+<kbd>C</kbd>, or when the continuation limit is reached.
+
 ## Comparing autopilot mode, `--allow-all`, and `--no-ask-user`
 
-`--allow-all`, and its alias `--yolo`, are permissions-related options that you can pass to the `copilot` command when you start an interactive session. For a full list of available options, see [AUTOTITLE](/copilot/reference/cli-command-reference#command-line-options).
+`--allow-all`, and its alias `--yolo`, are permissions-related options that you can pass to the `copilot` command when you start an interactive session. For a full list of available options, see [AUTOTITLE](/copilot/reference/copilot-cli-reference/cli-command-reference#command-line-options).
 
 The `--allow-all` and `--yolo` options allow the CLI agent to use all tools, paths, and URLs. You can also set these permissions during an interactive session, by using the `/allow-all` or `/yolo` slash commands.
 
@@ -72,7 +84,7 @@ The `--allow-all` and `--yolo` options allow the CLI agent to use all tools, pat
 
 With `--allow-all`, you are still in the normal interactive flow. {% data variables.product.prodname_copilot_short %} will still stop and ask you what you want it to do when it reaches a decision point. However, when {% data variables.copilot.copilot_cli_short %} needs to do something that would normally require approval, such as using tools, paths, or URLs, it will go ahead without asking for permission.
 
-The `--no-ask-user` option suppresses clarifying questions that {% data variables.product.prodname_copilot_short %} would normally ask. Instead the agent must make decisions on its own, rather than asking for your input. This provides a degree of autonomy. However, unlike autopilot mode, `--no-ask-user` does not allow the agent to continue working on a task through successive steps where interaction with the AI model is required. With this option, the CLI won't use additional premium requests, after your initial prompt, without your involvement.
+The `--no-ask-user` option suppresses clarifying questions that {% data variables.product.prodname_copilot_short %} would normally ask. Instead the agent must make decisions on its own, rather than asking for your input. This provides a degree of autonomy. However, unlike autopilot mode, `--no-ask-user` does not allow the agent to continue working on a task through successive steps where interaction with the AI model is required. With this option, the CLI won't use additional {% data variables.product.prodname_ai_credits %} without your involvement.
 
 ## Typical workflow for using autopilot mode
 

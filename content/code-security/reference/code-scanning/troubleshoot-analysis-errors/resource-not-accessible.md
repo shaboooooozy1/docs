@@ -11,6 +11,8 @@ redirect_from:
   - /code-security/code-scanning/troubleshooting-code-scanning/resource-not-accessible
   - /code-security/how-tos/scan-code-for-vulnerabilities/troubleshooting/troubleshooting-analysis-errors/resource-not-accessible
 contentType: reference
+category:
+  - Troubleshoot security tools
 ---
 
 >[!NOTE]
@@ -54,13 +56,11 @@ on:
   pull_request:
 ```
 
-For more information about editing the {% data variables.product.prodname_codeql %} workflow file, see [AUTOTITLE](/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/customizing-your-advanced-setup-for-code-scanning#editing-a-code-scanning-workflow).
-
 ### Analysis still failing on the default branch
 
 If the {% data variables.code-scanning.codeql_workflow %} still fails on a commit made on the default branch, you need to check:
 
 * Whether {% data variables.product.prodname_dependabot %} authored the commit
-* Whether the pull request that includes the commit has been merged using `@dependabot squash and merge`
+* Whether the pull request that includes the commit has been merged using squash and merge
 
-This type of merge commit is authored by {% data variables.product.prodname_dependabot %} and therefore, any workflows running on the commit will have read-only permissions. If you enabled {% data variables.product.prodname_code_scanning %} and {% data variables.product.prodname_dependabot %} security updates or version updates on your repository, we recommend you avoid using the {% data variables.product.prodname_dependabot %} `@dependabot squash and merge` command. Instead, you can enable auto-merge for your repository. This means that pull requests will be automatically merged when all required reviews are met and status checks have passed. For more information about enabling auto-merge, see [AUTOTITLE](/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request#enabling-auto-merge).
+This type of merge commit is authored by {% data variables.product.prodname_dependabot %} and therefore, any workflows running on the commit will have read-only permissions. If you enabled {% data variables.product.prodname_code_scanning %} and {% data variables.product.prodname_dependabot %} security updates or version updates on your repository, we recommend you enable auto-merge on the pull request with the **Create a merge commit** strategy. This avoids the squash-merge commit that would be authored by {% data variables.product.prodname_dependabot %}. For more information about enabling auto-merge, see [AUTOTITLE](/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request#enabling-auto-merge).

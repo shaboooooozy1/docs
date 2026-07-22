@@ -4,6 +4,8 @@ intro: 'Identify and fix errors in your code by asking {% data variables.product
 versions:
   fpt: '*'
 shortTitle: Debug with Copilot
+category:
+  - Learn to code
 ---
 
 Finding and fixing bugs in code can be frustrating, especially when you're a new developer. Thankfully, tools like {% data variables.product.prodname_copilot %} can quickly identify and squash bugs, letting you focus on more creative, interesting work.
@@ -137,4 +139,4 @@ With these tactics, you're well equipped to start squashing bugs in your project
 
 ## Next steps
 
-As you continue coding, you'll likely encounter specific problem scenarios and errors that are difficult to debug. For a list of potential issues and example {% data variables.copilot.copilot_chat_short %} prompts to fix them, see [AUTOTITLE](/copilot/copilot-chat-cookbook/debugging-errors).
+As you continue coding, you'll likely encounter specific problem scenarios and errors that are difficult to debug. For a list of potential issues and example {% data variables.copilot.copilot_chat_short %} prompts to fix them, see [AUTOTITLE](/copilot/tutorials/copilot-cookbook/debug-errors).

@@ -74,8 +74,8 @@ async function main(opts: MainOptions, args: string[]) {
   const foundFiles = []
   try {
     foundFiles.push(...JSON.parse(await fs.readFile('/tmp/foundFiles.json', 'utf-8')))
-  } catch (error: any) {
-    if (!(error.code && error.code === 'ENOENT')) {
+  } catch (error: unknown) {
+    if (!((error as NodeJS.ErrnoException).code === 'ENOENT')) {
       throw error
     }
   }
@@ -104,8 +104,8 @@ async function main(opts: MainOptions, args: string[]) {
 
   try {
     docsLinksFiles.push(...JSON.parse(await fs.readFile('/tmp/docsLinksFiles.json', 'utf-8')))
-  } catch (error: any) {
-    if (!(error.code && error.code === 'ENOENT')) {
+  } catch (error: unknown) {
+    if (!((error as NodeJS.ErrnoException).code === 'ENOENT')) {
       throw error
     }
   }

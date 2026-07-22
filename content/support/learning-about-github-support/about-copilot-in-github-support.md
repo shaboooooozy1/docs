@@ -6,7 +6,8 @@ versions:
   ghec: '*'
   ghes: '*'
 shortTitle: About Copilot in GitHub Support
-type: rai
+category:
+  - Understand your support options
 ---
 
 ## About {% data variables.copilot.copilot_in_support %}
@@ -64,4 +65,4 @@ We greatly value your feedback. As we continuously improve {% data variables.cop
 ## Further reading
 
 * [AUTOTITLE](/free-pro-team@latest/site-policy/github-terms/github-terms-for-additional-products-and-features#github-copilot)
-* [AUTOTITLE](/free-pro-team@latest/site-policy/privacy-policies/github-privacy-statement)
+* [AUTOTITLE](/free-pro-team@latest/site-policy/privacy-policies/github-general-privacy-statement)

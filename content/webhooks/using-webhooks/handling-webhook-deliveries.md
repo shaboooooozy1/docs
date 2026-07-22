@@ -15,6 +15,8 @@ versions:
   ghes: '*'
   ghec: '*'
 layout: inline
+category:
+  - Handle webhook deliveries
 ---
 
 ## Introduction
@@ -304,7 +306,7 @@ This article gave basic examples that print a message when a webhook delivery is
 
 ### Verify that the delivery is from {% data variables.product.company_short %}
 
-In your code that handles webhook deliveries, you should validate that the delivery is from {% data variables.product.company_short %} before processing the delivery further. For more information, see [AUTOTITLE](/webhooks/using-webhooks/securing-your-webhooks).
+In your code that handles webhook deliveries, you should validate that the delivery is from {% data variables.product.company_short %} before processing the delivery further. For more information, see [AUTOTITLE](/webhooks/using-webhooks/validating-webhook-deliveries).
 
 ### Deploy your code to a server
 

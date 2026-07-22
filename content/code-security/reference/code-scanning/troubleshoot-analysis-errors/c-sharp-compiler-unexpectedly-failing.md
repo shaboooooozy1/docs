@@ -11,11 +11,13 @@ redirect_from:
   - /code-security/code-scanning/troubleshooting-code-scanning/c-sharp-compiler-unexpectedly-failing
   - /code-security/how-tos/scan-code-for-vulnerabilities/troubleshooting/troubleshooting-analysis-errors/c-sharp-compiler-unexpectedly-failing
 contentType: reference
+category:
+  - Troubleshoot security tools
 ---
 
 ## About these errors
 
-The {% data variables.product.prodname_codeql %} tracer injects some flags into the C# compiler invocation to ensure every component is built and included in the {% data variables.product.prodname_codeql %} database, which may cause your C# code to build differently to what you expect during {% data variables.product.prodname_codeql %} analysis. See [AUTOTITLE](/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/codeql-code-scanning-for-compiled-languages).
+The {% data variables.product.prodname_codeql %} tracer injects some flags into the C# compiler invocation to ensure every component is built and included in the {% data variables.product.prodname_codeql %} database, which may cause your C# code to build differently to what you expect during {% data variables.product.prodname_codeql %} analysis. See [AUTOTITLE](/code-security/how-tos/find-and-fix-code-vulnerabilities/manage-your-configuration/codeql-for-compiled-languages).
 
 `/p:EmitCompilerGeneratedFiles=true` is one of the injected properties, and emits compiler-generated files during the build process. This option causes the compiler to generate additional files that are used to support features such as improved regular expression support, serialization, and web application view generation. These generated artifacts are typically not written to disk by the compiler, but setting the option to `true` forces writing the files to disk, and so the extractor can process the files.
 

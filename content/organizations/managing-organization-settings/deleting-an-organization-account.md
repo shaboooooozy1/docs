@@ -10,6 +10,8 @@ versions:
   ghes: '*'
   ghec: '*'
 shortTitle: Delete organization
+category:
+  - Set up your organization
 ---
 
 ## About deletion of your organization account
@@ -17,7 +19,7 @@ shortTitle: Delete organization
 {% ifversion fpt or ghec %}
 
 > [!TIP]
-> If you want to cancel your paid subscription, you can [downgrade your organization to {% data variables.product.prodname_free_team %}](/billing/managing-the-plan-for-your-github-account/downgrading-your-accounts-plan) instead of deleting the organization and its content.
+> If you want to cancel your paid subscription, you can [downgrade your organization to {% data variables.product.prodname_free_team %}](/billing/how-tos/manage-plan-and-licenses/downgrade-plan) instead of deleting the organization and its content.
 
 {% endif %}
 Deleting your organization account permanently removes all repositories, forks of private repositories, wikis, issues, pull requests, and project or organization pages. **This action is irreversible.**

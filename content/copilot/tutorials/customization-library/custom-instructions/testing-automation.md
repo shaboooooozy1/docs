@@ -9,6 +9,7 @@ category:
   - Path-specific
   - Repository
   - Configure Copilot
+  - Scale institutional knowledge
 complexity:
   - Advanced
 octicon: book
@@ -17,7 +18,7 @@ contentType: tutorials
 
 {% data reusables.copilot.customization-examples-note %}
 
-This example shows a path-specifc `python-tests.instructions.md` file that applies only to Python test files in your repository, using the `applyTo` field. For more information about path-specific instructions files, see [AUTOTITLE](/copilot/how-tos/configure-custom-instructions/add-repository-instructions#using-one-or-more-instructionsmd-files).
+This example shows a path-specific `python-tests.instructions.md` file that applies only to Python test files in your repository, using the `applyTo` field. For more information about path-specific instructions files, see [AUTOTITLE](/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions#using-one-or-more-instructionsmd-files).
 
 ````text copy
 ---

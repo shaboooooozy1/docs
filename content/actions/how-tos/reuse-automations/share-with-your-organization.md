@@ -9,6 +9,9 @@ redirect_from:
   - /actions/sharing-automations/sharing-actions-and-workflows-with-your-organization
   - /actions/how-tos/sharing-automations/sharing-actions-and-workflows-with-your-organization
   - /actions/administering-github-actions/sharing-workflows-secrets-and-runners-with-your-organization
+category:
+  - Reuse and share automations
+contentType: how-tos
 ---
 
 > [!WARNING]
@@ -26,4 +29,4 @@ redirect_from:
 
 ## Next steps
 
-To learn how to reuse your shared workflows, see [AUTOTITLE](/actions/using-workflows/reusing-workflows).
+To learn how to reuse your shared workflows, see [AUTOTITLE](/actions/how-tos/reuse-automations/reuse-workflows).

@@ -7,6 +7,8 @@ redirect_from:
 versions:
   ghec: '*'
 shortTitle: Connect an IdP
+category:
+  - Configure SAML single sign-on
 ---
 
 ## About connection of your IdP to your organization
@@ -30,4 +32,4 @@ You can find the SAML and SCIM implementation details for your IdP in the IdP's 
 
 ## SAML metadata
 
-For more information about SAML metadata for your organization, see [AUTOTITLE](/admin/identity-and-access-management/using-saml-for-enterprise-iam/saml-configuration-reference).
+For more information about SAML metadata for your organization, see [AUTOTITLE](/admin/managing-iam/iam-configuration-reference/saml-configuration-reference).

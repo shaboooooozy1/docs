@@ -9,6 +9,8 @@ versions:
   fpt: '*'
   ghes: '*'
   ghec: '*'
+category:
+  - Get started with search
 ---
 
 {% ifversion code-search-upgrade %}
@@ -112,4 +114,4 @@ The `sort:updated` qualifier sorts by how recently the items were updated.
 ## Further reading
 
 * [AUTOTITLE](/search-github/getting-started-with-searching-on-github/about-searching-on-github)
-* [AUTOTITLE](/issues/tracking-your-work-with-issues/filtering-and-searching-issues-and-pull-requests)
+* [AUTOTITLE](/issues/tracking-your-work-with-issues/using-issues/filtering-and-searching-issues-and-pull-requests)

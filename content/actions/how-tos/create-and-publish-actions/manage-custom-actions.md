@@ -1,15 +1,17 @@
 ---
 title: Managing custom actions
 shortTitle: Manage custom actions
-intro: 'Learn how to create and manage your own actions, and customize actions shared by the {% data variables.product.prodname_dotcom %} community.'
+intro: Learn how to create and manage your own actions, and customize actions shared by the {% data variables.product.prodname_dotcom %} community.
 versions:
   fpt: '*'
   ghes: '*'
   ghec: '*'
-type: overview
 redirect_from:
   - /actions/how-tos/administering-github-actions/managing-custom-actions
   - /actions/how-tos/creating-and-publishing-actions/managing-custom-actions
+contentType: how-tos
+category:
+  - Reuse and share automations
 ---
 
 ## Choosing a location for your action
@@ -30,7 +32,7 @@ Many people access {% data variables.product.github %} at a domain other than {%
 
 To ensure that your action is compatible with other platforms, do not use any hard-coded references to API URLs such as `https://api.github.com`. Instead, you can:
 
-* Use environment variables (see [AUTOTITLE](/actions/reference/variables-reference#default-environment-variables)):
+* Use environment variables (see [AUTOTITLE](/actions/reference/workflows-and-actions/variables#default-environment-variables)):
 
   * For the REST API, use the `GITHUB_API_URL` environment variable.
   * For GraphQL, use the `GITHUB_GRAPHQL_URL` environment variable.

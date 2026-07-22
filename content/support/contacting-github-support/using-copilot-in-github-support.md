@@ -8,6 +8,8 @@ versions:
   ghec: '*'
   ghes: '*'
 shortTitle: Using Copilot in GitHub Support
+category:
+  - Contact GitHub
 ---
 
 ## About {% data variables.copilot.copilot_in_support %}
@@ -42,4 +44,4 @@ We greatly value your feedback. As we continuously improve {% data variables.cop
 
 ## Further reading
 
-[{% data variables.product.prodname_dotcom %}'s Privacy Statement](/free-pro-team@latest/site-policy/privacy-policies/github-privacy-statement).
+[AUTOTITLE](/free-pro-team@latest/site-policy/privacy-policies/github-general-privacy-statement).

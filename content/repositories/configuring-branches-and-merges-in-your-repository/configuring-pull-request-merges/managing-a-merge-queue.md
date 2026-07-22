@@ -10,6 +10,8 @@ product: '{% data reusables.gated-features.merge-queue %}'
 shortTitle: Managing merge queue
 redirect_from:
   - /repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/using-a-merge-queue
+category:
+  - Configure merges and pull requests
 ---
 
 ## About merge queues
@@ -40,7 +42,7 @@ on:
   merge_group:
 ```
 
-For more information on the `merge_group` event, see [AUTOTITLE](/actions/using-workflows/events-that-trigger-workflows#merge_group).
+For more information on the `merge_group` event, see [AUTOTITLE](/actions/reference/workflows-and-actions/events-that-trigger-workflows#merge_group).
 
 ### Triggering merge group checks with third-party CI providers
 

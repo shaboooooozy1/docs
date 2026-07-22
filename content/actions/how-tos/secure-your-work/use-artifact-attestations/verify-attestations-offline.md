@@ -9,11 +9,14 @@ redirect_from:
   - /actions/security-guides/verifying-attestations-offline
   - /actions/security-for-github-actions/using-artifact-attestations/verifying-attestations-offline
   - /actions/how-tos/security-for-github-actions/using-artifact-attestations/verifying-attestations-offline
+category:
+  - Secure your workflows
+contentType: how-tos
 ---
 
 ## Prerequisites
 
-Before starting this guide, you should be generating artifact attestations for your builds. See [AUTOTITLE](/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
+Before starting this guide, you should be generating artifact attestations for your builds. See [AUTOTITLE](/actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations).
 
 ## Step 1: Download attestation bundle
 

@@ -12,6 +12,8 @@ versions:
   fpt: '*'
   ghes: '*'
   ghec: '*'
+category:
+  - Manage, move, and archive a repository
 ---
 
 ## About repository archival
@@ -24,7 +26,7 @@ versions:
 {% endif %}
 
 > [!NOTE]
-> Customers who use {% data variables.product.prodname_GH_secret_protection %} can enable {% data variables.product.prodname_secret_scanning %} on archived repositories. For more information, see [AUTOTITLE](/code-security/secret-scanning/introduction/about-secret-scanning).
+> Customers who use {% data variables.product.prodname_GH_secret_protection %} can enable {% data variables.product.prodname_secret_scanning %} on archived repositories. For more information, see [AUTOTITLE](/code-security/concepts/secret-security/secret-scanning).
 
 {% data reusables.repositories.archiving-repositories-recommendation %}
 
